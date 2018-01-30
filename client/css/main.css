@@ -1,0 +1,427 @@
+/* CSS declarations go here */
+
+body {
+  margin: 0;
+  background-color: #ffff;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+
+body,h1 {font-family: "Nexa-Bold", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: url('http://cdn.wonderfulengineering.com/wp-content/uploads/2014/09/white-wallpapers-1.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: ;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+/* BOTONES NAV */
+#signup2 {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 200px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.particle-wrap {
+  position: absolute;
+  pointer-events: none;
+  width: 99%;
+  height: 98%;
+}
+
+.content-wrap {
+  text-align: center;
+  background-color: rgba(228, 181, 34, 0.4);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {}
+
+
+
+
+
+
+
+
+
+#logo{
+  width:300px;
+  display: block;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#DoctorPatient{
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  padding: 10px;
+}
+
+#patient{
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  background-color: #2ACEC6;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border-radius: 10px;
+  margin-top: 18px;
+}
+
+#doctor{
+  font-family: "Raleway", sans-serif, bold;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  background-color: #2AA2CE;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border-radius: 10px;
+  margin-top: 18px;
+
+}
+
+#loader{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    align-items: center;
+    text-align-last:center;
+}
+
+#info{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  align-items: center;
+  text-align-last:left;
+}
+
+#height, #weight, #levelDe, #DaddressD  {
+    width: 30%;
+    height: 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    border-radius: 4px;
+    text-align-last:center;
+}
+#addressD,#levelD,#addressDe,#levelDe{
+  width: 150px;
+  height: 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+
+  border-radius: 4px;
+  text-align-last:center;
+}
+
+#DaddressD, #DaddressDe{
+  width: 269px;
+  height: 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+
+  border-radius: 4px;
+  text-align-last:center;
+}
+
+#changeHeight, #changeWeight, #addDoctor,#addDelegate {
+  width: 12%;
+  height: 20px;
+  border: 1px solid #ccc;
+  background-color: #2ACEC6;
+  color: white;
+  border-radius: 10px;
+}
+#seeInfo{
+  width: 5%;
+  font-size: 15px;
+  height: 20px;
+  border: 1px solid #ccc;
+  background-color: #2ACEC6;
+  color: white;
+  border-radius: 10px;
+}
+
+#addressinfoP{
+  width: 400px;
+  height: 20px;
+  font-size: 15px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align-last:center;
+}
+
+#add {
+  width: 9%;
+  height: 20px;
+  border: 1px solid #ccc;
+  background-color: #2ACEC6;
+  color: white;
+  border-radius: 10px;
+}
+
+#delDoctor,#delDelegate{
+  width: 12%;
+  height: 20px;
+  border: 1px solid #ccc;
+  background-color: #CE482A;
+  color: white;
+  border-radius: 10px;
+}
+
+#joinus {
+    width: 20%;
+    background-color: #38849B;
+    font-family: "Raleway", sans-serif, bold;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    margin-top: 18px
+}
+
+#signup, #addDoctorD {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+#addInfo {
+  background-color: #4CAF50;
+  color: white;
+  padding: 6px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+}
+
+#clousemodal{
+  background-color: #4CAF50;
+  color: white;
+  padding: 6px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+}
+
+
+
+#form{
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+
+
+
+#levelD, #levelDe{
+  width: 40px;
+}
+
+/* TABLEEE;*/
+
+table: {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+
+
+/* POP UP */
+
+#popupMM {
+    display: none;
+    background-color: #2ACEC6;
+    color: #fff;
+    position: absolute;
+    top: 8px;
+    right: 35px;
+    border: 1px solid #2ACEC6;
+    text-decoration: none;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 6px;
+}
+
+#popupMM:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 120px;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #2ACEC6;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+#popupMM .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
+
+
+
+/* footer*/
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TAB */
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ddd;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}

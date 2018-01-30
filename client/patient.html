@@ -1,0 +1,189 @@
+<template name="patientInfo">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div href="#" class="popup" id="popupMM">Change Your Account</div>
+
+    <div class="container" style="background-color:white">
+      <div class="w3-display-topleft " style="float:left;margin-left:70px; margin-top:17px">
+        <a>
+          <img src="/images/logobig.png" width="" height="45" class="d-inline-block align-top" >
+       </a>
+      </div>
+    </div>
+
+
+  <div class="w3-content " style="max-width:1400px;margin-top:80px">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+
+    <!-- Left Column -->
+    <div class="w3-third">
+      {{patientData}}
+
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="/images/Rectangle_1.png" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black" >
+            <h4 >{{TemplateVar.get "name"}}</h4>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p style="font-size:15px"><i class="fa fa-user-circle fa-fw w3-margin-right w3-large w3-text-teal" style="margin-top:17px"></i>{{TemplateVar.get "address"}}</p>
+          <p><i class="fa fa-male fa-fw w3-margin-right w3-large w3-text-teal"></i>Age: {{TemplateVar.get "age"}}</p>
+          <p><i class="fa fa-arrows-h fa-fw w3-margin-right w3-large w3-text-teal"></i>Height: {{TemplateVar.get "height"}} cm
+                    <input id="height" size="1"  type="number" placeholder="New Height">
+                  <button id="changeHeight" class="fa fa-refresh"></button></p>
+          <p><i class="fa fa-arrows-v fa-fw w3-margin-right w3-large w3-text-teal"></i>Weight: {{TemplateVar.get "weight"}} Kg
+                  <input id="height" size="1"  type="number" placeholder="New Weight">
+                <button id="changeWeight" class="fa fa-refresh"></button></p>
+          <p><i class="fa fa-heart fa-fw w3-margin-right w3-large w3-text-teal"></i>Blood Type: {{TemplateVar.get "bloodType"}}</p>
+          <hr>
+
+
+          {{getAllDelegated}}
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>My Delegations - {{TemplateVar.get "delegated"}} </b>
+            <button id="add" data-toggle="modal"  class="fa fa-plus" data-target="#myModal" style="visibility:hidden"></button>
+          </p>
+          <table id="tableDelegated" style="font-size:90%;margin-bottom:10px">
+          </table>
+
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>More Info</b></p>
+
+          {{getAllDoctor}}
+          {{getAllDelegate}}
+
+
+          <div class="tab" stlye="align-items:center">
+          <button class="tablink" id="1">Doctors - {{TemplateVar.get "doctors"}}</button>
+          <button class="tablinks" id="2">Delegates - {{TemplateVar.get "delegates"}}</button>
+
+        </div>
+
+          <div id="a" class="tabcontent">
+
+            <div>
+              <i class="fa fa-user-md fa-fw w3-margin-right w3-large w3-text-teal"></i> Add Doctor:
+              <input id="addressD" placeholder="Doctor Address">
+              <input id="levelD" type="number" placeholder="Level">
+              <button id="addDoctor" class="fa fa-check"></button>
+              <table id="tableDoctor" style="font-size:90%">
+                <tr>
+                  <th style="width:50%">Address Doctor</th>
+                  <th style="width:50%">Level</th>
+                </tr>
+              </table>
+            </div>
+            <div> Delete:
+              <input id="DaddressD"  placeholder="Address">
+              <button id="delDoctor" class="fa fa-times"></button>
+
+            </div>
+            <p class="w3-large"><b><i class=""></i></b></p>
+
+          <p style="font-size:13px">* 1= See All | 2= SeeLast</p>
+          </div>
+
+          <div id="b" class="tabcontent">
+
+
+            <div>
+              <i class="fa fa-users fa-fw w3-margin-right w3-large w3-text-teal"></i> Delegate:
+              <input id="addressDe" placeholder="Doctor Address">
+              <input id="levelDe" type="number" placeholder="Level">
+              <button id="addDelegate" class="fa fa-check"></button>
+              <table id="tableDelegate" style="font-size:90%">
+                <tr>
+                  <th style="width:50%">Address Delegate</th>
+                  <th style="width:50%">Level</th>
+                </tr>
+              </table>
+            </div>
+            <div> Delete:
+              <input id="DaddressDe"  placeholder="Address">
+              <button id="delDelegate" class="fa fa-times"></button>
+
+            </div>
+
+          <p class="w3-large"><b><i class=""></i></b></p>
+          <p style="font-size:13px">* 1= Family 2= Friend</p>
+          </div>
+
+
+          <p class="w3-large"><b><i class=""></i></b></p>
+
+          </div>
+        </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-info fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Information -  {{TemplateVar.get "infos"}} </h2>
+
+        <div class="w3-container" id="contenido">
+          {{getAllInfo}}
+        </div>
+
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+
+  <!-- End Grid -->
+  </div>
+
+  <!-- End Page Container -->
+</div>
+
+
+<!--MODAL-->
+<div class="modal fade" id="myModal" role="dialog">
+   <div class="modal-dialog">
+
+     <!-- Modal content-->
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">Add Doctor to patient</h4>
+       </div>
+
+
+       <div class="modal-body">
+         <div class="user-container">
+             <div id="form">
+               <div>
+               <input type="text" id="paddress" placeholder="Patient">
+               <input type="text" id="daddress" placeholder="Doctor">
+               </div>
+             </div>
+         </div>
+       </div>
+
+
+       <div class="modal-footer">
+         <div>
+         <img  id="loader" src="images/wait.gif">
+         <button type="button" class="btn btn-default" id="addDoctorD" >Add Doctor</button>
+       </div>
+       </div>
+     </div>
+
+   </div>
+ </div>
+
+
+  <footer class=" footer w3-container w3-teal w3-center w3-margin-top">
+
+  <p>by Víctor Miranda</p>
+</footer>
+
+</template>

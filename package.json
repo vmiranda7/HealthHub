@@ -1,0 +1,12 @@
+{
+  "name": "HealthHub",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "boostrap": "^2.0.0",
+    "meteor-node-stubs": "^0.3.2"
+  }
+}

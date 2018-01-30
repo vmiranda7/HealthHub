@@ -1,0 +1,138 @@
+<head>
+ <title>HealthHub</title>
+ <link rel="shortcut icon" type="images/x-icon" href="images/favicon.ico" />
+
+</head>
+
+<body>
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <div class="particle-wrap">
+    <div id="particles-js"></div>
+  </div-->
+</body>
+
+
+<template name="index">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+
+  <div class="container" style="background-color:white">
+    <div class="w3-display-topleft " style="float:left;margin-left:70px; margin-top:17px">
+      <a>
+        <img src="/images/logo.png" width="" height="45" class="d-inline-block align-top" >
+     </a>
+    </div>
+
+    <div class="w3-display-topright"  style="float:right;margin-right:70px">
+      <button id="doctor"  class="btn btn-success" style="margin-right:10px">Doctor</button>
+      <button id="patient" class="btn btn-success">Patient</button>
+    </div>
+
+  </div>
+
+<div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">
+      <a>
+      <img src="/images/logobig.png" width="" height="100" class="d-inline-block align-top" >
+     </a>
+   </h1>
+
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+
+  <div align="center" style="margin-top:10px" >
+    <img src="/images/Textlogo.png" width="" height="25" class="d-inline-block">
+  </div>
+
+  <div align="center" style="margin-top:10px" >
+    <button id="joinus" data-toggle="modal" data-target="#myModal"> Join Us</button>
+  </div>
+
+    </div>
+  <div class="w3-display-bottomleft w3-padding-large" style="color:black; font-family:'Raleway'">by Víctor Miranda </div>
+
+</div>
+
+<!--MODAL-->
+<div class="modal fade" id="myModal" role="dialog">
+   <div class="modal-dialog">
+
+     <!-- Modal content-->
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">Join Us</h4>
+       </div>
+
+
+       <div class="modal-body">
+         <div class="user-container">
+             <div id="form">
+               <h4>New here?</h4>
+               <div>
+               <input type="text" id="name" placeholder="Name">
+               <input type="text" id="age" placeholder="Age">
+               <input type="text" id="heightP" placeholder="Height">
+               <input type="text" id="weightP" placeholder="Weight">
+               <select type="select" id="category-select">
+                   <option disabled="disabled" selected="selected">BloodType</option>
+                     {{#each bloodType}}
+                   <option value="{{this}}">{{this}}</option>
+                     {{/each}}
+               </select>
+               </div>
+             </div>
+         </div>
+       </div>
+
+
+       <div class="modal-footer">
+         <div>
+         <img  id="loader" src="images/wait.gif">
+         <button type="button" class="btn btn-default" id="signup" >Register</button>
+       </div>
+       </div>
+     </div>
+
+   </div>
+ </div>
+
+</template>
+
+
+
+
+<template name="index2">
+
+<img id="logo" src="images/logoName.png">
+
+  <div id="DoctorPatient">
+    <button id="doctor"  class="btn btn-success">I'm a doctor</button>
+    <button id="patient" class="zname">I'm a Patient</button>
+  </div>
+  <div class="user-container">
+      <div id="form">
+        <h4>New here?</h4>
+        <div>
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="age" placeholder="Age">
+        <input type="text" id="height" placeholder="Height">
+        <input type="text" id="weight" placeholder="Weight">
+        <select type="select" id="category-select">
+            <option disabled="disabled" selected="selected">BloodType</option>
+              {{#each bloodType}}
+            <option value="{{this}}">{{this}}</option>
+              {{/each}}
+        </select>
+        </div>
+        <button type="submit" class="btn btn-info fullbutton" id="signup">Register
+        </button>
+      </div>
+      <img id="loader" src="https://loading.io/spinners/typing/index.-text-entering-comment-loader.gif">
+  </div>
+</template>
+
+<!--------------------------------------------------------------------->
