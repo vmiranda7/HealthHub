@@ -16,7 +16,7 @@ var infoAdded = contractInfo.MessageH();
 
 infoAdded.watch(function(error, result){
   if (!error){
-    location.reload();
+    //location.reload();
   } else {
   }
 });

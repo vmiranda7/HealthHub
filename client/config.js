@@ -2,9 +2,20 @@
 // 0xe3b263edca6cff404593e83479a078cf60515a83
 // 0x2ec8fe8d4ba29b6cd0a2c5d09f424034e9ec4d5f
 
+
+//0x94799ef44e483af0f30856ad660559e180c37cca
+//0xae058fb7fe09ea5b968ea82c209dd3b1bce07dc6
+//0x9c7546f1830e89f3ca34ceaff8bd266420827e10
+
+
+
+// 0x94799ef44e483af0f30856ad660559e180c37cca
+// 0x825e717eb95070c39ce0418c7571fe9650976f67
+// 0xd00705e00ef3169af48e8e9f06d2eb8a03568dce
+
 module.exports= {
   contractDoctors : {
-    address : "0x3a7282e93397e94a08bab251e078a7587f9d1ea8",
+    address : "0x94799ef44e483af0f30856ad660559e180c37cca",
     abi : [
 	{
 		"constant": false,
@@ -179,7 +190,7 @@ module.exports= {
 ]
 },
   contractPatient : {
-    address : "0xe3b263edca6cff404593e83479a078cf60515a83",
+    address : "0x825e717eb95070c39ce0418c7571fe9650976f67",
     abi :[
 	{
 		"constant": true,
@@ -570,7 +581,7 @@ module.exports= {
 ]
     },
     contractInfo : {
-      address : "0x2ec8fe8d4ba29b6cd0a2c5d09f424034e9ec4d5f",
+      address : "0xd00705e00ef3169af48e8e9f06d2eb8a03568dce",
       abi : [
 	{
 		"constant": true,

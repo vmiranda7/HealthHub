@@ -36,14 +36,14 @@ var addDoctorDelegate = contractPatient.Message();
 
 change.watch(function(error, result){
   if (!error){
-    location.reload();
+    //location.reload();
   } else {
   }
 });
 
 addDoctorDelegate.watch(function(error, result){
   if (!error){
-    location.reload();
+    //location.reload();
   } else {
   }
 });
