@@ -21,6 +21,11 @@
       </div>
     </div>
 
+    <div class="w3-display-topright"  style="float:right;margin-right:70px">
+      <button id="doctor"  class="btn btn-success" style="margin-right:10px">Doctor</button>
+      <button id="patient" class="btn btn-success">Patient</button>
+    </div>
+
 
   <div class="w3-content " style="max-width:1400px;margin-top:80px">
 
@@ -47,35 +52,13 @@
           <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>My Patients - {{TemplateVar.get "patientsSize"}}</b></p>
           {{getAllPatient}}
 
-              <table id="tablePatient" table-layaout="fixed" style="font-size:80%">
+              <table id="tablePatient" table-layaout="fixed" style="font-size:90%">
                 <tr>
-                  <th >Address Patient</th>
-                  <th >Level</th>
-                </tr>
-              </table>
-          <div id="b" class="tabcontent">
-
-
-            <div>
-              <i class="fa fa-users fa-fw w3-margin-right w3-large w3-text-teal"></i> Add Delegate:
-              <input id="addressDe" placeholder="Doctor Address">
-              <input id="levelDe" type="number" placeholder="Level">
-              <button id="addDelegate" class="fa fa-check"></button>
-              <table id="tableDelegate"  >
-                <tr>
-                  <th style="width:50%">Address Delegate</th>
+                  <th style="width:50%">Address Patient</th>
                   <th style="width:50%">Level</th>
                 </tr>
               </table>
-            </div>
-            <div> Delete:
-              <input id="DaddressDe"  placeholder="Address">
-              <button id="delDelegate" class="fa fa-times"></button>
 
-            </div>
-
-          <p style="font-size:13px">* 1= Family 2= Friend</p>
-          </div>
 
 
           <p class="w3-large"><b><i class=""></i></b></p>

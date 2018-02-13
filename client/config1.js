@@ -1,31 +1,116 @@
-// 0x3a7282e93397e94a08bab251e078a7587f9d1ea8
-// 0xe3b263edca6cff404593e83479a078cf60515a83
-// 0x2ec8fe8d4ba29b6cd0a2c5d09f424034e9ec4d5f
+// 0x60f6d5d944f83594f85a04729b7e1f83b0214664
+// 0xe97c2b1af5bccc19731a1596c2987b5fed7a8393
+// 0x2163464494a98c787eb1af40968570aeff5e38ce
+
+// Paciente
+//"Sergio Perez Sevillano", "24", "183", "65", "0+"
+// Medico
+// "Jorge Merino", "Cirujano", "0x64a2ae2302f5f094855bb999d8c710e63b66dfcb"
 
 module.exports= {
   contractDoctors : {
-    address : "0x3a7282e93397e94a08bab251e078a7587f9d1ea8",
+    address : "0x60f6d5d944f83594f85a04729b7e1f83b0214664",
     abi : [
 	{
-		"constant": false,
+		"constant": true,
 		"inputs": [
-			{
-				"name": "_name",
-				"type": "string"
-			},
-			{
-				"name": "_speciality",
-				"type": "string"
-			},
 			{
 				"name": "_doctorAddress",
 				"type": "address"
 			}
 		],
-		"name": "addDoctor",
-		"outputs": [],
+		"name": "searchDoctor",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
 		"payable": false,
-		"stateMutability": "nonpayable",
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "getMyPatients",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_patientAddress",
+				"type": "address"
+			}
+		],
+		"name": "getMyPatientLevel",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getAllPatient",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address[]"
+			},
+			{
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_doctoraddress",
+				"type": "address"
+			}
+		],
+		"name": "existDoctor",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -52,42 +137,6 @@ module.exports= {
 	},
 	{
 		"constant": true,
-		"inputs": [],
-		"name": "getAllPatient",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address[]"
-			},
-			{
-				"name": "",
-				"type": "uint256[]"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_patientAddress",
-				"type": "address"
-			},
-			{
-				"name": "_doctorAddress",
-				"type": "address"
-			}
-		],
-		"name": "delPatient",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
 		"inputs": [
 			{
 				"name": "",
@@ -107,14 +156,44 @@ module.exports= {
 			{
 				"name": "doctorAddress",
 				"type": "address"
-			},
-			{
-				"name": "IDlength",
-				"type": "uint256"
 			}
 		],
 		"payable": false,
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "msgs",
+				"type": "string"
+			}
+		],
+		"name": "Message",
+		"type": "event"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"name": "_speciality",
+				"type": "string"
+			},
+			{
+				"name": "_doctorAddress",
+				"type": "address"
+			}
+		],
+		"name": "addDoctor",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -140,22 +219,21 @@ module.exports= {
 		"type": "function"
 	},
 	{
-		"constant": true,
+		"constant": false,
 		"inputs": [
 			{
-				"name": "_doctoraddress",
+				"name": "_patientAddress",
+				"type": "address"
+			},
+			{
+				"name": "_doctorAddress",
 				"type": "address"
 			}
 		],
-		"name": "existDoctor",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
+		"name": "delPatient",
+		"outputs": [],
 		"payable": false,
-		"stateMutability": "view",
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -163,23 +241,11 @@ module.exports= {
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "constructor"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"name": "msgs",
-				"type": "string"
-			}
-		],
-		"name": "Message",
-		"type": "event"
 	}
 ]
 },
   contractPatient : {
-    address : "0xe3b263edca6cff404593e83479a078cf60515a83",
+    address : "0xe97c2b1af5bccc19731a1596c2987b5fed7a8393",
     abi :[
 	{
 		"constant": true,
@@ -384,6 +450,25 @@ module.exports= {
 	},
 	{
 		"constant": true,
+		"inputs": [
+			{
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "getMyDoctorL",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
 		"inputs": [],
 		"name": "myInfo",
 		"outputs": [
@@ -428,6 +513,44 @@ module.exports= {
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_doctorAddress",
+				"type": "address"
+			}
+		],
+		"name": "getMyPatientLevel",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "getMyDoctor",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -570,29 +693,21 @@ module.exports= {
 ]
     },
     contractInfo : {
-      address : "0x2ec8fe8d4ba29b6cd0a2c5d09f424034e9ec4d5f",
+      address : "0x2163464494a98c787eb1af40968570aeff5e38ce",
       abi : [
 	{
 		"constant": true,
 		"inputs": [
 			{
-				"name": "i",
-				"type": "uint256"
+				"name": "_patientAddress",
+				"type": "address"
 			}
 		],
-		"name": "getMyInfo",
+		"name": "getMyInfotoDoctorLength",
 		"outputs": [
 			{
 				"name": "",
-				"type": "string"
-			},
-			{
-				"name": "",
 				"type": "uint256"
-			},
-			{
-				"name": "",
-				"type": "address"
 			}
 		],
 		"payable": false,
@@ -648,20 +763,40 @@ module.exports= {
 		"constant": true,
 		"inputs": [
 			{
-				"name": "_patientAddress",
-				"type": "address"
+				"name": "i",
+				"type": "uint256"
 			}
 		],
-		"name": "getMyInfotoDoctorLength",
+		"name": "getMyInfo",
 		"outputs": [
 			{
 				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
 				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "address"
 			}
 		],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "msg",
+				"type": "string"
+			}
+		],
+		"name": "MessageH",
+		"type": "event"
 	},
 	{
 		"constant": false,
@@ -684,25 +819,13 @@ module.exports= {
 	{
 		"inputs": [
 			{
-				"name": "_patientContract",
+				"name": "_healthpersonContract",
 				"type": "address"
 			}
 		],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "constructor"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"name": "msg",
-				"type": "string"
-			}
-		],
-		"name": "MessageH",
-		"type": "event"
 	}
 ]
     }

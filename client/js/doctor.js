@@ -105,12 +105,20 @@ Template.doctorInfo.helpers({
 
 });
 Template.doctorInfo.events({
+  'click #doctor' : function(){
+    Router.go('/doctor');
+  },
+  'click #patient' : function(){
+    Router.go('/patient');
+  },
   'click #seeInfo' : function(){
     var addressP = $('#addressinfoP').val();
     if(addressP != ""){
+      console.log(addressP);
 
        $("#detailsPatient").html("");
       contractPatient.myInfoToDoctor(addressP, function(err,res){
+        console.log(res);
         if(!err && res[0] != "0x0000000000000000000000000000000000000000"){
 
           let addressI = '<p style="font-size:15px"><i class="fa fa-user-circle fa-fw w3-margin-right w3-large w3-text-teal" style="margin-top:17px"></i>'+res[0]+'</p>';
@@ -123,6 +131,7 @@ Template.doctorInfo.events({
         }
       });
       contractInfo.getMyInfotoDoctorLength(addressP, function(err,res){
+        console.log("hola")
         let ninfo = parseInt(res.c[0]);
          $("#contenido").html("");
         for (j=ninfo-1; j >= 0 ; j--){

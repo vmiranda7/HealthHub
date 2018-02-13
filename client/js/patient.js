@@ -230,6 +230,12 @@ Template.patientInfo.helpers({
 });
 
 Template.patientInfo.events({
+  'click #doctor' : function(){
+    Router.go('/doctor');
+  },
+  'click #patient' : function(){
+    Router.go('/patient');
+  },
 
   'click #changeHeight' : function(){
     var height = $('#height').val();
