@@ -8,29 +8,6 @@ let contractDoctor = web3.eth.contract(config.contractDoctors.abi).at(config.con
 let contractPatient = web3.eth.contract(config.contractPatient.abi).at(config.contractPatient.address);
 let contractInfo = web3.eth.contract(config.contractInfo.abi).at(config.contractInfo.address);
 
-/*
-let arrayDoctor=[];
-let arrayDoctor2=[];
-let aarrayDoctor=[];
-let aarrayarrayDoctor=[];
-var arrayarrayDoctor = [];*/
-
-
-
-/// FUNCTION ON CREATE
-
-  /*
-Template.patientInfo.onCreated(function() {
-
-
-  this.location = new ReactiveVar;
-
-  var self = this;
-  this.autorun(function() {
-    return console.log('location changed!', self.location.get());
-  })
-});*/
-
 var change = contractPatient.MessageChangeData();
 var addDoctorDelegate = contractPatient.Message();
 

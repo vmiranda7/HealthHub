@@ -7,24 +7,10 @@ const config = require('../config');
 let contractDoctor = web3.eth.contract(config.contractDoctors.abi).at(config.contractDoctors.address);
 let contractPatient = web3.eth.contract(config.contractPatient.abi).at(config.contractPatient.address);
 
-/*
-console.log(window.location.pathname)
-
-if (window.location.pathname == "/"){
-  particlesJS.load('particles-js', 'particles.json', function() {
-    console.log('Particles Loaded');
-  });
-}*/
-
-
 
 /* Index */
 Template.index.onCreated(function indexreated() {
-/*
-  particlesJS.load('particles-js', 'particles.json', function() {
-    console.log('Particles Loaded');
-  });
-*/
+
 var category;
 
 var createdPatient = contractPatient.Message();
